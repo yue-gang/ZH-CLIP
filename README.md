@@ -1,0 +1,2 @@
+# ZH-CLIP
+中文CLIP模型
