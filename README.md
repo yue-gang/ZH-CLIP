@@ -27,6 +27,21 @@ image_features = outputs.image_features
 text_features = outputs.text_features
 text_probs = (image_features @ text_features.T).softmax(dim=-1)
 ```
+
+此外，在此为了对比不同方法的效果，集成了其他中文CLIP模型的推理方法，为了方便大家使用，也同时把推理代码公开，如有侵权请联系我。代码中仅实现了与clip-vit-large-patch14同级别的模型，后续可能适配更多不同版本模型的使用。
+| # | 模型 |   别名 |
+| :----: | :----------: | :------------: |
+| 0 | ZH-CLIP | zhclip |
+| 1	| AltCLIP | altclip |
+| 2	| Chinese-CLIP	| cnclip |
+| 3	| TaiyiCLIP	| taiyiclip |
+| 4	| Multilingual-CLIP	| mclip |
+| 5	| CLIP-Chinese	| clip-chinese |
+使用方法见[inference.py](https://github.com/yue-gang/ZH-CLIP/blob/main/inference.py)
+## ToDO
+1. 提升模型效果；
+2. 更多任务上进行测试；
+3. 适配更多模型。
 ## 致谢
 感谢[Yiming Cui](https://ymcui.com/) 在HuggingFace模型处理上的指导。
 
