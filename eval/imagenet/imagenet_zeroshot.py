@@ -1,5 +1,6 @@
 import sys
 import torch
+import argparse
 import torchvision.datasets as datasets
 from . import zeroshot_classification
 from .imagenet_templates_zh import imagenet_classnames, openai_imagenet_template
@@ -38,11 +39,26 @@ def evaluate(imagenet_valid_path, model):
     }
     return result
 
-if __name__ == "__main__":
-    imagenet_valid_path = '/data/imagenet/val'
-    model_name = 'zhclip'
-    model = get_model(model_name)
-    assert model is not None
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--val-path",
+        type=str,
+        default= '/data/imagenet/val',
+        help="ImageNet-1K Valid File."
+    )
+    parser.add_argument(
+        "--model-name",
+        type=str,
+        default= 'zhclip',
+        help="Chinese Clip Models, Choose From zhclip, altclip, chclip, taiyiclip, mclip, clip_chinese"
+    )
+    args = parser.parse_args()
+    assert args.model_name in {'zhclip', 'altclip', 'chclip', 'taiyiclip', 'mclip', 'clip_chinese'}
+    model = get_model(args.model_name)
     model = model.eval().to(device)
-    result = evaluate(imagenet_valid_path, model)
+    result = evaluate(args.val_path, model)
     print(result)
+
+if __name__ == "__main__":
+    main()

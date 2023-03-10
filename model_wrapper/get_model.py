@@ -9,7 +9,7 @@ def get_model(name):
     model = None
     if name == 'altclip':
         model = AltClipWrapper()
-    elif name == 'chclip':
+    elif name == 'cnclip':
         model = CnClipWrapper()
     elif name == 'taiyiclip':
         model = TaiyiClipWrapper()
