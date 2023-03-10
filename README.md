@@ -1,4 +1,5 @@
 # ZH-CLIP: 中文CLIP模型
+HuggingFace链接：[nlpcver/zh-clip-vit-roberta-large-patch14](https://huggingface.co/nlpcver/zh-clip-vit-roberta-large-patch14)
 ## 网络结构
 * 图像Encoder网络结构与[openai/clip-vit-large-patch14](https://huggingface.co/openai/clip-vit-large-patch14)相同；
 * 文本Encoder网络结构与[hfl/chinese-roberta-wwm-ext-large](https://huggingface.co/hfl/chinese-roberta-wwm-ext-large)相同。
