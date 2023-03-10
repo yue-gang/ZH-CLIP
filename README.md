@@ -30,8 +30,8 @@ text_probs = (image_features @ text_features.T).softmax(dim=-1)
 ```
 ### Other Chinese CLIP Models
 此外，在此为了对比不同方法的效果，集成了其他中文CLIP模型的推理方法，为了方便大家使用，也同时把推理代码公开，如有侵权请联系我。代码中仅实现了与clip-vit-large-patch14同级别的模型，后续可能适配更多不同版本模型的使用。
-| # | 模型 |   别名 |
-| :----: | :---------- | :------------: |
+| # | 模型 | 别名 |
+| :----: | :---------- | :---------- |
 | 0 | [ZH-CLIP](https://github.com/yue-gang/ZH-CLIP) | zhclip |
 | 1	| [AltCLIP](https://github.com/FlagAI-Open/FlagAI/tree/master/examples/AltCLIP) | altclip |
 | 2	| [Chinese-CLIP](https://github.com/OFA-Sys/Chinese-CLIP)	| cnclip |
