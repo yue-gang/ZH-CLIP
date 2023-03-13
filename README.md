@@ -1,5 +1,7 @@
 # ZH-CLIP: 中文CLIP模型
-HuggingFace链接：[nlpcver/zh-clip-vit-roberta-large-patch14](https://huggingface.co/nlpcver/zh-clip-vit-roberta-large-patch14)
+HuggingFace链接
+* 模型[nlpcver/zh-clip-vit-roberta-large-patch14](https://huggingface.co/nlpcver/zh-clip-vit-roberta-large-patch14)
+* Demo[nlpcver/ZH-CLIP](https://huggingface.co/spaces/nlpcver/ZH-CLIP)
 ## 网络结构
 * 图像Encoder网络结构与[openai/clip-vit-large-patch14](https://huggingface.co/openai/clip-vit-large-patch14)相同；
 * 文本Encoder网络结构与[hfl/chinese-roberta-wwm-ext-large](https://huggingface.co/hfl/chinese-roberta-wwm-ext-large)相同。
@@ -13,7 +15,7 @@ HuggingFace链接：[nlpcver/zh-clip-vit-roberta-large-patch14](https://huggingf
 ```python
 from PIL import Image
 import requests
-from models.zhclip import ZhCLIPProcessor, ZhCLIPModel  # From https://www.github.com/nlpcver/Zh-CLIP
+from models.zhclip import ZhCLIPProcessor, ZhCLIPModel  # From https://www.github.com/yue-gang/ZH-CLIP
 
 version = 'nlpcver/zh-clip-vit-roberta-large-patch14'
 model = ZhCLIPModel.from_pretrained(version)
